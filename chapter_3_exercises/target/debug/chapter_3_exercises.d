@@ -1,0 +1,1 @@
+C:\Users\malma\Desktop\projects\rust\the_rust_programming_language\chapter_3_exercises\target\debug\chapter_3_exercises.exe: C:\Users\malma\Desktop\projects\rust\the_rust_programming_language\chapter_3_exercises\src\main.rs
