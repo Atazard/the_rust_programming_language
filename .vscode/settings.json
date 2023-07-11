@@ -2,6 +2,8 @@
     "rust-analyzer.linkedProjects": [
         ".\\guessing_game\\Cargo.toml",
         ".\\variables\\Cargo.toml",
-        ".\\functions\\Cargo.toml"
+        ".\\functions\\Cargo.toml",
+        ".\\branches\\Cargo.toml",
+        ".\\loops\\Cargo.toml"
     ]
 }
