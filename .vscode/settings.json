@@ -5,6 +5,7 @@
         ".\\functions\\Cargo.toml",
         ".\\branches\\Cargo.toml",
         ".\\loops\\Cargo.toml",
-        ".\\chapter_3_exercises\\Cargo.toml"
+        ".\\chapter_3_exercises\\Cargo.toml",
+        ".\\ownership\\Cargo.toml"
     ]
 }
