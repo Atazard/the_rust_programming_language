@@ -8,6 +8,9 @@
         ".\\chapter_3_exercises\\Cargo.toml",
         ".\\ownership\\Cargo.toml",
         ".\\structs\\Cargo.toml",
-        ".\\rectangles\\Cargo.toml"
+        ".\\rectangles\\Cargo.toml",
+        ".\\enums\\Cargo.toml",
+        ".\\match_cf\\Cargo.toml",
+        ".\\if_let\\Cargo.toml"
     ]
 }
