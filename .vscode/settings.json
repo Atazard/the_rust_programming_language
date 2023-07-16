@@ -11,6 +11,8 @@
         ".\\rectangles\\Cargo.toml",
         ".\\enums\\Cargo.toml",
         ".\\match_cf\\Cargo.toml",
-        ".\\if_let\\Cargo.toml"
+        ".\\if_let\\Cargo.toml",
+        ".\\backyard\\Cargo.toml",
+        ".\\restaurant\\Cargo.toml"
     ]
 }
