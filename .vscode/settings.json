@@ -13,6 +13,7 @@
         ".\\match_cf\\Cargo.toml",
         ".\\if_let\\Cargo.toml",
         ".\\backyard\\Cargo.toml",
-        ".\\restaurant\\Cargo.toml"
+        ".\\restaurant\\Cargo.toml",
+        ".\\collections\\Cargo.toml"
     ]
 }
