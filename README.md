@@ -12,7 +12,7 @@ cargo new project_name
 - Update settings.json so rust-analyzer can work properly:  
 add ".\\project_name\\Cargo.toml"
 
-- Live reloading with cargo-watch
+- Live reloading with cargo-watch  
 cargo watch -q -c -w src/ -x 'run -q'
   - q: quiet, supresses the output of cargo watch
   - c: clears the screen
