@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, io::stdin};
 
 fn main() {
     let list = [4, 3, 1, 4, 2];
@@ -18,8 +18,108 @@ fn main() {
     let pig_string = convert_to_pig(string);
     println!("pig string: {}", pig_string);
 
-    let _departments = ["Engineering", "Sales", "HR"];
+    println!();
+
     //TODO figure out the last excersise
+    let _departments = ["Engineering", "Sales", "HR"];
+    let mut company = HashMap::new();
+
+    loop {
+        print_menu();
+
+        let mut input = String::new();
+        stdin().read_line(&mut input).expect("Failed to read line.");
+        let input = input.trim();
+        let input_parts: Vec<&str> = input.split_whitespace().collect();
+
+        if input_parts.is_empty() {
+            println!("Invalid command. Try again.\n");
+            continue;
+        }
+
+        match input_parts[0].to_lowercase().as_str() {
+            "add" => {
+                if input_parts.len() < 4 || input_parts[2].to_lowercase() != "to" {
+                    println!(
+                        "Invalid command. Please use the format: 'Add [Name] to [Department]'\n"
+                    );
+                    continue;
+                }
+
+                add_employee_to_department(&mut company, input_parts[1], input_parts[3]);
+            }
+            "list" => {
+                if input_parts.len() < 2 {
+                    println!("Invalid command. Please use 'List [Department]' or 'List All'\n");
+                    continue;
+                }
+
+                match input_parts[1].to_lowercase().as_str() {
+                    "all" => {
+                        list_all_employees(&company);
+                    }
+                    department => {
+                        list_employees_of_department(&company, department);
+                    }
+                }
+            }
+            "exit" => {
+                println!("Goodbye.\n");
+                break;
+            }
+            _ => {
+                println!("Invalid command. Try again.\n");
+            }
+        }
+    }
+}
+
+fn list_employees_of_department(company: &HashMap<String, Vec<String>>, department: &str) {
+    if let Some(employees) = company.get(department) {
+        let mut sorted_employees = employees.clone();
+        sorted_employees.sort();
+
+        println!("Employees in {}:", department);
+        for employee in sorted_employees {
+            println!("\t{}", employee);
+        }
+        println!();
+    } else {
+        println!("Department: {} not found!", department);
+    }
+}
+
+fn list_all_employees(company: &HashMap<String, Vec<String>>) {
+    let mut departments: Vec<&String> = company.keys().collect();
+
+    if departments.is_empty() {
+        println!("No employees in any department!");
+    }
+
+    departments.sort();
+
+    for department in departments {
+        list_employees_of_department(company, department);
+    }
+}
+
+fn add_employee_to_department(
+    company: &mut HashMap<String, Vec<String>>,
+    name: &str,
+    department: &str,
+) {
+    company
+        .entry(department.to_string())
+        .or_insert(Vec::new())
+        .push(name.to_string());
+    println!("Added {} to {}\n", name, department);
+}
+
+fn print_menu() {
+    println!("1. Add employee to department. ('Add [Name] to [Department]')");
+    println!("2. List employees. ('List [Department]' or 'List all')");
+    println!("0. Exit.");
+    println!("Enter command:");
 }
 
 #[test]
