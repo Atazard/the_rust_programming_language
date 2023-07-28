@@ -15,6 +15,7 @@
         ".\\backyard\\Cargo.toml",
         ".\\restaurant\\Cargo.toml",
         ".\\collections\\Cargo.toml",
-        ".\\chapter_8_ex\\Cargo.toml"
+        ".\\chapter_8_ex\\Cargo.toml",
+        ".\\error_handling\\Cargo.toml"
     ]
 }   
