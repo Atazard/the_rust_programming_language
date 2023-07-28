@@ -1,3 +1,4 @@
+#![allow(unused)]
 #[derive(Debug)]
 enum UsState {
     Alabama,
@@ -28,8 +29,8 @@ fn main() {
         3 => add_fancy_hat(),
         7 => remove_fancy_hat(),
         other => move_player(other), // like _, use it if you plan to use the value
-        // _ => reroll() // catch-all but you don't need the value
-        // _ => () // catch-all, do nothing
+                                     // _ => reroll() // catch-all but you don't need the value
+                                     // _ => () // catch-all, do nothing
     }
 }
 
@@ -49,12 +50,13 @@ fn value_in_cents(coin: Coin) -> u8 {
 }
 
 fn add_one(x: Option<i32>) -> Option<i32> {
-    // manual impl of Option::map?
-    // x.map(|i| i + 1)
-    match x {
-        None => None,
-        Some(i) => Some(i + 1),
-    }
+    // manual impl of Option::map
+    // match x {
+    //     None => None,
+    //     Some(i) => Some(i + 1),
+    // }
+
+    x.map(|i| i + 1)
 }
 
 fn add_fancy_hat() {}

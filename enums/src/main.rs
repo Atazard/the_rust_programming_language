@@ -1,3 +1,4 @@
+#![allow(unused)]
 #[derive(Clone, Debug)]
 enum Message {
     Quit,

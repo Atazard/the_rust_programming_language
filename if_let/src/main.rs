@@ -1,7 +1,8 @@
+#![allow(unused)]
 #[derive(Debug)]
 enum UsState {
     Alabama,
-    Alaska
+    Alaska,
 }
 
 enum Coin {
