@@ -18,3 +18,12 @@ cargo watch -q -c -w src/ -x 'run -q'
   - c: clears the screen
   - w: specify files or folders to watch (in this case only the source directory)
   - x: specify cargo command to execute (run quiet)
+
+Some usefull crates:
+  - serde
+  - serde_json
+  - chrono
+  - itertools
+  - tokio
+  - pretty_env_logger
+  - derive_builder

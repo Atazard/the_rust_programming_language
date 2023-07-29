@@ -17,6 +17,7 @@
         ".\\collections\\Cargo.toml",
         ".\\chapter_8_ex\\Cargo.toml",
         ".\\error_handling\\Cargo.toml",
-        ".\\generics\\Cargo.toml"
+        ".\\generics\\Cargo.toml",
+        ".\\aggregator\\Cargo.toml"
     ]
 }   
